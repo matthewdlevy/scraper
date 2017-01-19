@@ -1,0 +1,23 @@
+{
+  "name": "scraper",
+  "homepage": "http://localhost",
+  "version": "0.0.1",
+  "description": "Gather documents (PDFs, etc) from webpages",
+  "license": "MIT",
+  "author": {
+    "name": "Matthew Levy",
+    "email": "matthew@fivemilerun.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/*/*.git"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^1.0.1",
+    "load-grunt-tasks": "^3.5.2",
+    "node-jsdom": "^3.1.5",
+    "node-libcurl": "^1.0.0"
+  }
+}
