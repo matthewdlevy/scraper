@@ -44,3 +44,9 @@ Folder to house the documents. Defaults to `tmp`.
 
 ### data_file
 File name of the CSV/Text data file. Defaults to `data_file.txt`; will reside in the `folder` folder.
+
+### timeout
+Time (in seconds) to wait for the document to load. Defaults to 5 seconds.
+
+### connect_timeout
+Time (in seconds) to wait for the initial server response. Defaults to 2 seconds.

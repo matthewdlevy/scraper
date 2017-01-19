@@ -7,7 +7,9 @@ module.exports = function (grunt) {
           url_prefix: '',
           label_selector: null,
           folder: 'tmp',
-          data_file: 'data_file.txt'
+          data_file: 'data_file.txt',
+          timeout: 5,
+          connect_timeout: 2
         });
 
         var done = this.async();
@@ -23,6 +25,9 @@ module.exports = function (grunt) {
         var label_selector = options.label_selector;
         var tmp_folder = options.folder;
         var data_file_path = tmp_folder + '/' + options.data_file;
+        var timeout = options.timeout;
+        var connect_timeout = options.connect_timeout;
+        
         fs.writeFileSync( data_file_path, '');
 
         var url_count = 0;
@@ -113,8 +118,8 @@ module.exports = function (grunt) {
             var curl = new Curl();
             curl.setOpt('URL', o.original_url);
             curl.setOpt('SSL_VERIFYPEER', false);
-            curl.setOpt('CONNECTTIMEOUT', 2);
-            curl.setOpt('TIMEOUT', 5);
+            curl.setOpt('CONNECTTIMEOUT', connect_timeout);
+            curl.setOpt('TIMEOUT', timeout);
             curl.setOpt('WRITEFUNCTION', function( buff, nmemb, size ){
 
               var written = 0;
