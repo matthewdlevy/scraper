@@ -38,3 +38,9 @@ Array of filetypes to match against; `['pdf']` by default
 ### label_selector
 Pass a complete jQuery selector as a string to get relevant text to label each document in the data CSV/Text file.
 `"$(this).parents('tr').children('td:first').text()"`
+
+### folder
+Folder to house the documents. Defaults to `tmp`.
+
+### data_file
+File name of the CSV/Text data file. Defaults to `data_file.txt`; will reside in the `folder` folder.
